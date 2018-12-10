@@ -15,3 +15,14 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+# Serverless
+.serverless
+functions
+
+# local env files
+.env.local
+.env.*.local
+
+# Ignore compile lambdas
+/lambda
