@@ -1,4 +1,4 @@
-import { $GET } from '@/store/lib/rest'
+import axios from 'axios'
 import { API_ROOT } from './constants'
 
 // // // //
@@ -10,7 +10,7 @@ export default {
     commit('fetching', true)
 
     // Fetches Collection from the server
-    $GET(API_ROOT)
+    axios.get(API_ROOT)
     .then((json) => {
       commit('collection', json)
       commit('fetching', false)

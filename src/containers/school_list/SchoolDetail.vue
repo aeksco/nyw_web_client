@@ -28,14 +28,14 @@
         <div class="col-lg-6 mr-0">
           <span class="badge badge-lg mb-2 badge-success" v-b-tooltip.hover.right title="Faucets within CDC reccommended lead concentration">
             <i class="fa fa-check"></i>
-            < 15 PPB: {{ model.outlets_leq_15ppb }}
+            <!-- < 15 PPB: {{ model.outlets_leq_15ppb }} -->
           </span>
         </div>
 
         <div class="col-lg-6 ml-0">
           <span class="badge badge-lg mb-2 badge-danger" v-b-tooltip.hover.right title="Faucets exceeding CDC reccommended lead concentration">
             <i class="fa fa-warning"></i>
-            > 15 PPB: {{ model.outlets_gt_15ppb }}
+            <!-- > 15 PPB: {{ model.outlets_gt_15ppb }} -->
           </span>
         </div>
 

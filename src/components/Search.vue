@@ -5,7 +5,6 @@
         <input @input="setFilter($event.target.value)" class="form-control w-100" type="search" :value="filter" :placeholder="placeholder || 'Search'">
       </form>
     </div>
-    </div>
   </div>
 </template>
 

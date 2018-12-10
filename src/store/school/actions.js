@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { $GET } from '@/store/lib/rest'
+import axios from 'axios'
 import { API_ROOT } from './constants'
 import { PAGINATION_ACTIONS } from '@/store/lib/mixins'
 
@@ -10,13 +10,13 @@ let debouncedFetch
 // School module actions
 export default {
   ...PAGINATION_ACTIONS,
-  fetchCollection: ({ state, getters, commit, dispatch }) => {
+  fetchCollection: ({ getters, commit, dispatch }) => {
     commit('fetching', true)
     commit('fetching_model', true)
 
     // Fetches Collection from the server
-    $GET(getters['fetchUrl'], {
-      query: {
+    axios.get(getters['fetchUrl'], {
+      params: {
         ...getters['paginationQuery'],
         ...getters['apiQuery']
       }
@@ -40,7 +40,7 @@ export default {
     commit('fetching_model', true)
 
     // Fetches Model from the server
-    $GET(API_ROOT + '/' + state.selected_model_id)
+    axios.get(API_ROOT + '/' + state.selected_model_id)
     .then((json) => {
       commit('model', json)
       setTimeout(() => {
