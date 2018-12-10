@@ -11,15 +11,15 @@ This repository maintains all the source code for the client-side application ru
 
 ### Setup
 
-1. Run `npm install`
+1. Run `yarn install`
 
-2. Run `npm start`
+2. Run `yarn serve`
 
 ### Deploy
 
-1. Run `npm install`
+1. Run `yarn install`
 
-2. Run `npm run build`
+2. Run `yarn build`
 
 The production-ready application will be in the `dist/` directory
 
